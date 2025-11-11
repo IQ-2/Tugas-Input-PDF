@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Postingan Baru</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah File PDF</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; }
-        div { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="text"],input[type="file"] {
-            width: 100%; padding: 8px; box-sizing: border-box;
-        }
-        .back-link { display: inline-block; margin-bottom: 20px; }
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
     </style>
-</head>
-<body>
-
- <!-- <a href="daftar-post.php" class="back-link">&laquo; Kembali ke Daftar Postingan</a> -->
-    
-    <h1>Tambah Postingan Blog Baru</h1>
+  </head>
+  <body>
+    <h1>Tambah File PDF</h1>
 
     <form action="proses-upload.php" method="POST" enctype="multipart/form-data">
-        
-        <div>
-            <label for="input-gambar">Input File PDF (Maks 10mb):</label>
-            <input type="file" id="input-pdf" name="pdf_post" accept="application/pdf required>
-        </div>
-        
-        <div>
-            <button type="submit">Kirim</button>
-        </div>
+      <div>
+        <label for="input-gambar">Input File PDF (Maks 10mb):</label>
+        <input type="file" id="input-pdf" name="pdf_post" accept="application/pdf required>
+      </div>
 
+      <div>
+        <button type="submit">Kirim</button>
+      </div>
     </form>
-
-</body>
+  </body>
 </html>
