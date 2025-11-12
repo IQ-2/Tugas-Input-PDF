@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($errors)) {
 
-        $sql = "INSERT INTO pdf (lokasi_file, nama) VALUES (?, ?)";
+        $sql = "INSERT INTO pdf (path, nama) VALUES (?, ?)";
         $stmt = mysqli_prepare($koneksi, $sql);
 
         mysqli_stmt_bind_param($stmt, "ss", $dest_path, $file_name);
