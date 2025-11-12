@@ -52,13 +52,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($errors)) {
 
-        $sql = "INSERT INTO pdf (lokasi_file) VALUES (?)";
+        $sql = "INSERT INTO pdf (lokasi_file, nama) VALUES (?, ?)";
         $stmt = mysqli_prepare($koneksi, $sql);
 
-        mysqli_stmt_bind_param($stmt, "s", $dest_path);
+        mysqli_stmt_bind_param($stmt, "ss", $dest_path, $file_name);
 
         if (mysqli_stmt_execute($stmt)) {
             echo '<h1 style="text-align:center; font-size:40px; margin-top:200px;">File Berhasil Di Upload 😁😁😁😁😁😁😁😁😁😁</h1>';
+            echo '<div style="text-align:center;">';
+            echo "<a href='form-tambah.html'>&laquo Kembali ke formulir</a>";
+            echo '</div>';
             exit();
         } else {
             echo "Error saat menyimpan ke database: " . mysqli_error($koneksi);
